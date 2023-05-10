@@ -70,7 +70,7 @@ class Spreadsheet
 
 实现类*Impl*是一个*private*嵌套类，因为只有*Spreadsheet*需要了解这个实现类。*Spreadsheet*现在只包含一个数据成员：指向*Impl*实例的指针。*public*方法与旧式的*Spreadsheet*相同。
 
-```C++
+```C++:
 void Spreadsheet::Impl::swap(Impl& other) noexcept
 {
     using std::swap;
@@ -84,6 +84,5 @@ void Spreadsheet::Impl::swap(Impl& other) noexcept
 真正将接口和实现分离的技术功能强大。支持这种方法最有力的论证不是将接口分离的美感，而是类的实现改变后大幅缩短构建时间。
 
 ---
-
 
 

@@ -351,3 +351,54 @@ This code produces a navbar in the following style, that too without writing a s
 
 [EXAMPLE](https://getbootstrap.com/docs/5.2/examples/): quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.
 
+### Client-Side from validation with HTML5
+
+---
+
+HTML5 includes a fairly solid form validation mechanism powered by th following `<input />` attribute: `type`, `pattern`, `require`. you can delegate some data verification function to the browser.
+
+* the `type` attribute.
+* the `pattern` attribute.
+* giving hints.
+  
+  ```html
+  <input type="text" name="ssn" 
+         pattern="^\d{3}-\d{2}-\d{4}">
+         title="the social security number" />
+  ```
+* the `required` attribute
+
+### \<input> 输入（表单输入）元素
+
+---
+
+HTML \<input> 元素为基于Web的表单创建交互式控件，以便接受来自用户的数据，可以使用各种类型的输入数据和控件小部件。
+
+#### \<input> types
+
+\<input>的工作方式相当程度上取决于`type`属性值，如果未制定，则采取默认类型为text
+
+* button 没有默认值，显示`value`属性的值，默认为空。
+* checkbox
+* color
+* date
+* datetime-local
+* email
+* hidden
+* image
+* month
+* number
+* password
+* radio
+* range
+* reset
+* search
+* submit
+* tel
+* text
+* time
+* url
+* week
+
+
+
