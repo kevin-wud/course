@@ -5,39 +5,39 @@
 /*
     单向链表
 */
-typedef struct ListElmt__
+typedef struct CListElmt__
 {
     void *data;
-    struct ListElmt__ *next;
-} ListElmt;
+    struct CListElmt__ *next;
+} CListElmt;
 
-typedef struct List__
+typedef struct CList__
 {
     int size;
     int (*match)(const void *key1, const void *key2);
     void (*destroy)(void *data);
-    ListElmt *head;
-    ListElmt *tail;
-} List;
+    CListElmt *head;
+    CListElmt *tail;
+} CList;
 
-void list_init(List * list, void (*destroy)(void * data));
+void clist_init(CList * list, void (*destroy)(void * data));
 
-void list_destroy(List *list);
+void clist_destroy(CList *list);
 
-int list_ins_next(List *list, ListElmt *element, const void *data);
+int clist_ins_next(CList *list, CListElmt *element, const void *data);
 
-int list_rem_next(List *list, ListElmt *element, void **data);
+int clist_rem_next(CList *list, CListElmt *element, void **data);
 
-int list_size(const List *list);
+int clist_size(const CList *list);
 
-ListElmt *list_head(const List *list);
+CListElmt *clist_head(const CList *list);
 
-ListElmt *list_tail(const List *list);
+CListElmt *clist_tail(const CList *list);
 
-int list_is_head(const List * list, const ListElmt *element);
+int clist_is_head(const CList * list, const CListElmt *element);
 
-void *list_data(const ListElmt *element);
+void *clist_data(const CListElmt *element);
 
-ListElmt *list_next(const ListElmt *element);
+CListElmt *clist_next(const CListElmt *element);
 
 #endif
